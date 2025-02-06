@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { LayoutGridDemo } from "@/components/LayoutGridDemo";
 import { Projects } from "@/components/Projects";
 import { AuroraBackground } from "@/components/ui/AuroraBackground";
+
 // import { SparklesPreview } from "@/components/SparklesText";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
 import { Approach } from "@/components/Approach";
@@ -32,9 +33,7 @@ export default function Home() {
     <main className="relative bg-black-100">
       <div>
         <FloatingNav navItems={navItems} />
-        <AuroraBackground>
-          <Hero />
-        </AuroraBackground>
+        <Hero />
         <LayoutGridDemo />
         <Approach />
         <Projects />
