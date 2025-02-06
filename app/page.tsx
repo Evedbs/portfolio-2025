@@ -5,6 +5,7 @@ import { Projects } from "@/components/Projects";
 import { AuroraBackground } from "@/components/ui/AuroraBackground";
 // import { SparklesPreview } from "@/components/SparklesText";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
+import { Approach } from "@/components/Approach";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 export default function Home() {
   const navItems = [
@@ -35,6 +36,7 @@ export default function Home() {
           <Hero />
         </AuroraBackground>
         <LayoutGridDemo />
+        <Approach />
         <Projects />
       </div>
     </main>
