@@ -2,7 +2,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { BackgroundBeams } from "./ui/BackgroundBeams";
 
 const Hero = () => {
   return (
@@ -27,7 +26,7 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-100 max-w-80">
             Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
           </p>
 
@@ -40,7 +39,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <BackgroundBeams />
     </div>
   );
 };
