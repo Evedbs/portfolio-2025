@@ -8,6 +8,7 @@ import { AuroraBackground } from "@/components/ui/AuroraBackground";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
 import { Approach } from "@/components/Approach";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { Social } from "@/components/Social";
 export default function Home() {
   const navItems = [
     {
@@ -31,13 +32,12 @@ export default function Home() {
 
   return (
     <main className="relative bg-black-100">
-      <div>
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <LayoutGridDemo />
-        <Approach />
-        <Projects />
-      </div>
+      <FloatingNav navItems={navItems} />
+      <Hero />
+      <LayoutGridDemo />
+      <Approach />
+      <Projects />
+      <Social />
     </main>
   );
 }

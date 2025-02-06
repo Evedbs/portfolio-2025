@@ -10,7 +10,7 @@ export function Approach() {
       <h2 className="py-8 text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         My approach
       </h2>
-      <div className="flex flex-row gap-2">
+      <div className="flex lg:flex-row gap-2 md:flex-col sm:flex-col">
         <DirectionAwareHover imageUrl={imageUrl}>
           <p className="font-bold text-xl">Phase 1</p>
           <p className="font-normal text-sm">Planning & Strategy</p>
