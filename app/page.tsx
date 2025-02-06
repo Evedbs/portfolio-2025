@@ -1,11 +1,10 @@
-import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
-import { DirectionAwareHoverDemo } from "@/components/DirectionAwareHoverDemo";
+// import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
 import Hero from "@/components/Hero";
 import { LayoutGridDemo } from "@/components/LayoutGridDemo";
 import { Projects } from "@/components/Projects";
+import { AuroraBackground } from "@/components/ui/AuroraBackground";
 // import { SparklesPreview } from "@/components/SparklesText";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
-import { WavyBackgroundDemo } from "@/components/WavyBackgroundDemo";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 export default function Home() {
   const navItems = [
@@ -32,10 +31,10 @@ export default function Home() {
     <main className="relative bg-black-100">
       <div>
         <FloatingNav navItems={navItems} />
-        <AuroraBackgroundDemo />
-        <Hero />
+        <AuroraBackground>
+          <Hero />
+        </AuroraBackground>
         <LayoutGridDemo />
-        <DirectionAwareHoverDemo />
         <Projects />
       </div>
     </main>
