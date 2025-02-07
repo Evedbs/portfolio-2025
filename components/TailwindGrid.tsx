@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import MagicButton from "./ui/MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import { StackList } from "./StackList";
 
 export const TailwindGrid = () => {
   const [copied, setCopied] = useState(false);
@@ -17,12 +18,17 @@ export const TailwindGrid = () => {
       <div className="text-blue-100 bg-cover col-span-3 border-[#262b4a] border rounded-xl py-8 px-8 bg-[#090d24] bg-[url('../assets/computer.jpg')]">
         <h3>I prioritize client collaboration, fostering open communication</h3>
       </div>
-      <div className="text-blue-100 bg-[#090d24] col-span-3 col-start-1 row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
-        <span className="font-light">I constantly try to improve</span>
-        <h2 className="font-extrabold">My tech stack</h2>
+      <div className="text-blue-100 bg-[#090d24] flex flex-row col-span-3 col-start-1 row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
+        <div className="flex flex-col">
+          <span className="font-light">I constantly try to improve</span>
+          <h2 className="font-extrabold">My tech stack</h2>
+        </div>
+        <StackList />
       </div>
-      <div className="text-blue-100 bg-[#090d24] col-span-3 row-span-2 col-start-4 row-start-1 border-[#262b4a] border rounded-xl py-8 px-8">
-        3
+      <div className="bg-[url('../assets/globe.jpg')] bg-cover text-blue-100 bg-[#090d24] col-span-3 row-span-2 col-start-4 row-start-1 border-[#262b4a] border rounded-xl py-8 px-8">
+        <span className="text-blue-100">
+          I&apos;m very flexible with time zone communications
+        </span>
       </div>
       <div className="text-blue-100 bg-[#090d24] col-span-2 row-start-3 border-[#262b4a] border rounded-xl py-8 px-8">
         Tech enthusiast with a passion for development.
