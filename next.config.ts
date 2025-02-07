@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "assets.aceternity.com",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+        pathname: "/**",
       }
     ],
   },
