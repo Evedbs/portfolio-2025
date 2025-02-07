@@ -8,6 +8,8 @@ import { Approach } from "@/components/Approach";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import Footer from "@/components/Footer";
 import { TailwindGrid } from "@/components/TailwindGrid";
+import { TypewriterEffectSmoothDemo } from "@/components/TypewriterDemo";
+
 export default function Home() {
   const navItems = [
     {

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import MagicButton from "./ui/MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { StackList } from "./StackList";
+import { TypewriterEffectSmoothDemo } from "./TypewriterDemo";
 
 export const TailwindGrid = () => {
   const [copied, setCopied] = useState(false);
@@ -30,12 +31,9 @@ export const TailwindGrid = () => {
           I&apos;m very flexible with time zone communications
         </span>
       </div>
-      <div className="text-blue-100 bg-[#090d24] col-span-2 row-start-3 border-[#262b4a] border rounded-xl py-8 px-8">
-        Tech enthusiast with a passion for development.
-      </div>
-      <div className="text-blue-100 flex flex-col justify-center items-center bg-[#090d24] col-span-4 col-start-3 row-start-3 border-[#262b4a] border rounded-xl py-8 px-8">
+      <div className="text-blue-100 col-span-4 col-start-2 row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl py-8 px-8">
         <span className="font-extrabold">
-          Do you want to start a project together?
+          <TypewriterEffectSmoothDemo />
         </span>
         <MagicButton
           title={copied ? "Email is Copied!" : "Copy my email address"}

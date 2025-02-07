@@ -6,7 +6,7 @@ export const StackList = () => {
 
   return (
     <div className="flex flex-row">
-      <div className="flex flex-col gap-2 px-4 ">
+      <div className="flex flex-col gap-2 px-4">
         {stackListLeft.map((item, index) => {
           return (
             <div
@@ -18,7 +18,7 @@ export const StackList = () => {
           );
         })}
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-2" style={{ marginTop: "-2rem" }}>
         {stackListRight.map((item, index) => {
           return (
             <div
