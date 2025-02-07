@@ -1,5 +1,8 @@
 "use client";
+import { useState } from "react";
 import { LayoutGrid } from "./ui/LayoutGrid";
+import MagicButton from "./ui/MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
 
 export function LayoutGridDemo() {
   return (
@@ -12,13 +15,10 @@ export function LayoutGridDemo() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
-      </p>
+      <p className="font-bold md:text-4xl text-xl text-white">Communication</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        I prioritize client collaboration, fostering open communication
       </p>
     </div>
   );
@@ -27,14 +27,10 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House above the clouds
-      </p>
+      <p className="font-bold md:text-4xl text-xl text-white">Globe</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+        I&apos;m very flexible with time zone communications
       </p>
     </div>
   );
@@ -42,13 +38,10 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Greens all over
-      </p>
+      <p className="font-bold md:text-4xl text-xl text-white">My tech stack</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        I constantly try to improve the exercise of my passion
       </p>
     </div>
   );
@@ -57,12 +50,45 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
+        From the first step to the last, every step is important
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         A house by the river is a place of peace and tranquility. It&apos;s the
         perfect place to relax, unwind, and enjoy life.
+      </p>
+    </div>
+  );
+};
+
+const SkeletonFive = () => {
+  const [copied, setCopied] = useState(false);
+
+  // const defaultOptions = {
+  //   loop: copied,
+  //   autoplay: copied,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+
+  const handleCopy = () => {
+    const text = "evedubuisson5@gmail.com";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
+  return (
+    <div>
+      <MagicButton
+        title={copied ? "Email is Copied!" : "Copy my email address"}
+        icon={<IoCopyOutline />}
+        position="left"
+        handleClick={handleCopy}
+        otherClasses="!bg-[#161A31]"
+      />
+      <p className="font-bold md:text-4xl text-xl text-white">
+        Do you want to start a project together ?
       </p>
     </div>
   );
@@ -99,7 +125,7 @@ const cards = [
   },
   {
     id: 5,
-    content: <SkeletonOne />,
+    content: <SkeletonFive />,
     className: "md:col-span-2",
     thumbnail:
       "https://images.unsplash.com/photo-1435732960391-11053ee5e6b6?q=80&w=2448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

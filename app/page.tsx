@@ -11,17 +11,17 @@ import Footer from "@/components/Footer";
 export default function Home() {
   const navItems = [
     {
-      name: "Home",
+      name: "About",
       link: "/",
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
+      name: "Approach",
       link: "/about",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Contact",
+      name: "Projects",
       link: "/contact",
       icon: (
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
