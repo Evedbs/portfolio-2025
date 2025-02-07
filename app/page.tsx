@@ -2,13 +2,12 @@
 import Hero from "@/components/Hero";
 import { LayoutGridDemo } from "@/components/LayoutGridDemo";
 import { Projects } from "@/components/Projects";
-import { AuroraBackground } from "@/components/ui/AuroraBackground";
 
 // import { SparklesPreview } from "@/components/SparklesText";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
 import { Approach } from "@/components/Approach";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { Social } from "@/components/Social";
+import Footer from "@/components/Footer";
 export default function Home() {
   const navItems = [
     {
@@ -37,7 +36,7 @@ export default function Home() {
       <LayoutGridDemo />
       <Approach />
       <Projects />
-      <Social />
+      <Footer />
     </main>
   );
 }
