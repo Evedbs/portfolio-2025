@@ -8,26 +8,23 @@ import { Approach } from "@/components/Approach";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import Footer from "@/components/Footer";
 import { TailwindGrid } from "@/components/TailwindGrid";
-import { TypewriterEffectSmoothDemo } from "@/components/TypewriterDemo";
 
 export default function Home() {
   const navItems = [
     {
       name: "About",
-      link: "/",
+      link: "#about",
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Approach",
-      link: "/about",
+      link: "#approach",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Contact",
-      link: "/contact",
-      icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
+      name: "Projects",
+      link: "#projects",
+      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
   ];
 

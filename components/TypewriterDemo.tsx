@@ -16,7 +16,7 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "start",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-[#b1a1ff] dark:text-[#b1a1ff]",
     },
     {
       text: "a",

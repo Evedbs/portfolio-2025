@@ -23,7 +23,10 @@ export function Projects() {
     },
   ];
   return (
-    <div className="py-8 w-screen flex flex-col justify-center items-center">
+    <div
+      id="projects"
+      className="py-8 w-screen flex flex-col justify-center items-center"
+    >
       <h2 className="text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         A small selection of recent projects
       </h2>

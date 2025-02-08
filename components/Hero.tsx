@@ -9,7 +9,10 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 relative w-full overflow-hidden flex flex-col">
+    <div
+      className="pb-20 pt-36 relative w-full overflow-hidden flex flex-col"
+      id="about"
+    >
       <div className="absolute inset-0 w-full h-full bg-black-100 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       <Boxes className="z-10 absolute" />
 
@@ -37,7 +40,7 @@ const Hero = () => {
             Hi! I&apos;m Eve, a Javascript Developer based in France.
           </p>
 
-          <a href="#about" className="my-4">
+          <a href="#projects" className="my-4">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
