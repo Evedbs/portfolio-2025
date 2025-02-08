@@ -7,7 +7,7 @@ import { DirectionAwareHover } from "./ui/DirectionAwareHover";
 
 export function Approach() {
   return (
-    <div className="py-24 w-screen flex flex-col justify-center items-center">
+    <div className="pb-24 w-screen flex flex-col justify-center items-center">
       <h2 className="py-14 text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         My approach
       </h2>

@@ -8,7 +8,6 @@ import {
   IconTerminal2,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
-import Image from "next/image";
 
 // import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";

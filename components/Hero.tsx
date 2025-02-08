@@ -1,8 +1,11 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import chevronsDown from "../assets/chevronsDown.svg";
+import "../app/styles/Hero.css";
 
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Boxes } from "./ui/BackgroundBoxes";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -20,7 +23,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex flex-col justify-center items-center relative z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic Web Magic with Next.js
@@ -30,11 +33,11 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-100 max-w-80">
+          <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl text-blue-100 max-w-80">
             Hi! I&apos;m Eve, a Javascript Developer based in France.
           </p>
 
-          <a href="#about">
+          <a href="#about" className="my-4">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
@@ -42,6 +45,11 @@ const Hero = () => {
             />
           </a>
         </div>
+        <Image
+          src={chevronsDown}
+          alt="chevrons down"
+          className="opacity-0 animation-chevrons w-12"
+        />
       </div>
     </div>
   );
