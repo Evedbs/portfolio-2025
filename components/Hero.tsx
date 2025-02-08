@@ -2,10 +2,14 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { Boxes } from "./ui/BackgroundBoxes";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-36 relative w-full overflow-hidden flex flex-col">
+      <div className="absolute inset-0 w-full h-full bg-black-100 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+      <Boxes className="z-10 absolute" />
+
       <div
         className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
