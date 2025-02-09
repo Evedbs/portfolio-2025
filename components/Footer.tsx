@@ -56,16 +56,13 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="px-8 flex mt-16 md:flex-row flex-col justify-between items-center">
+      <div className="px-8 flex mt-16 md:flex-row flex-row justify-between items-center">
         <p className="text-blue-100 md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Eve Dubuisson
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
-          <FloatingDock
-            mobileClassName="translate-y-20" // only for demo, remove for production
-            items={links}
-          />
+        <div className="flex items-center md:gap-3 gap-6 bg-black-100">
+          <FloatingDock items={links} />
         </div>
       </div>
     </footer>
