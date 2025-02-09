@@ -1,12 +1,15 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import { slideData } from "../../data/index";
+import Image from "next/image";
 
 interface SlideData {
   title: string;
   button: string;
   src: string;
   href: string;
+  icons: { id: number; src: string }[];
 }
 
 interface SlideProps {
@@ -106,7 +109,6 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
           )}
         </div>
-
         <article
           className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
@@ -123,6 +125,24 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             </a>
           </div>
         </article>
+        <div className="flex items-center">
+          {slideData[index].icons.map((icon, index) => (
+            <div
+              key={index}
+              className="border border-white/[.2] rounded-full bg-transparent backdrop-blur-sm lg:w-10 lg:h-10 w-16 h-16 flex justify-center items-center"
+              style={{
+                transform: `translateX(-${5 * index + 2}px)`,
+              }}
+            >
+              <Image
+                key={index}
+                src={icon.src}
+                alt="icon"
+                className="w-10 h-10 lg:w-6 lg:h-6"
+              />
+            </div>
+          ))}
+        </div>
       </li>
     </div>
   );
@@ -190,6 +210,7 @@ export function Carousel({ slides }: CarouselProps) {
       >
         {slides.map((slide, index) => (
           <Slide
+            index={index}
             key={index}
             slide={slide}
             index={index}
