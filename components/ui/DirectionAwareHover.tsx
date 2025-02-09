@@ -77,7 +77,7 @@ export const DirectionAwareHover = ({
         onMouseLeave={handleMouseLeave}
         ref={ref}
         className={cn(
-          "md:h-96 w-60 h-60 md:w-96 xs:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
+          "card-phase md:h-96 w-96 h-96 md:w-96 xs:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
           className
         )}
       >
@@ -120,7 +120,7 @@ export const DirectionAwareHover = ({
                 ease: "easeOut",
               }}
               className={cn(
-                `text-white absolute flex flex-col top-[10%] left-[10%] items-center justify-center z-40 text-center ${childrenClassName}`
+                `text-white absolute flex flex-col top-[10%] left-[10%] w-80 items-center justify-center z-40 text-center ${childrenClassName}`
               )}
             >
               {isHovered && children}

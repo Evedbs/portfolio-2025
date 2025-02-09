@@ -50,8 +50,14 @@ export function Approach() {
               key={phase.title}
               imageUrl={phase.imageUrl}
             >
-              <p className="font-normal text-sm">{phase.subtitle}</p>
-              <p>{phase.description}</p>
+              <div className="flex flex-col justify-center ml-[-128px] text-center gap-4">
+                <p className="subtitle-card uppercase mt-10 font-normal italic text-sm">
+                  {phase.subtitle}
+                </p>
+                <p className="description-card font-normal text-xl mt-8">
+                  {phase.description}
+                </p>
+              </div>
             </DirectionAwareHover>
           );
         })}
