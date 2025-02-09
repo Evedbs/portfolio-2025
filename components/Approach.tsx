@@ -50,7 +50,7 @@ export function Approach() {
               key={phase.title}
               imageUrl={phase.imageUrl}
             >
-              <div className="flex flex-col justify-center ml-[-128px] text-center gap-4">
+              <div className="flex flex-col justify-center container-content-card text-center gap-4">
                 <p className="subtitle-card uppercase mt-10 font-normal italic text-sm">
                   {phase.subtitle}
                 </p>

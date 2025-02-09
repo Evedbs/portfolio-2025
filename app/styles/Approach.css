@@ -26,6 +26,9 @@
 }
 
 @media (max-width: 500px) {
+  .container-content-card {
+    margin-left: -128px;
+  }
   .card-phase {
     width: 240px;
     height: 240px;
