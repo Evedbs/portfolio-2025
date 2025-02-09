@@ -1,0 +1,25 @@
+@media (max-width: 1920px) {
+  .direction-phases {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1600px) {
+  .direction-phases {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1200px) {
+  .direction-phases {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .direction-phases {
+    flex-direction: column;
+  }
+}

@@ -4,6 +4,7 @@ import MagicButton from "./ui/MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { StackList } from "./StackList";
 import { TypewriterEffectSmoothDemo } from "./TypewriterDemo";
+import { AuroraBackground } from "./ui/AuroraBackground";
 
 export const TailwindGrid = () => {
   const [copied, setCopied] = useState(false);
@@ -32,16 +33,18 @@ export const TailwindGrid = () => {
         </span>
       </div>
       <div className="text-blue-100 col-span-4 col-start-2 row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl py-8 px-8">
-        <span className="font-extrabold">
-          <TypewriterEffectSmoothDemo />
-        </span>
-        <MagicButton
-          title={copied ? "Email is Copied!" : "Copy my email address"}
-          icon={<IoCopyOutline />}
-          position="left"
-          handleClick={handleCopy}
-          otherClasses="!bg-[#161A31]"
-        />
+        <AuroraBackground className="w-full h-full">
+          <span className="font-extrabold">
+            <TypewriterEffectSmoothDemo />
+          </span>
+          <MagicButton
+            title={copied ? "Email is Copied!" : "Copy my email address"}
+            icon={<IoCopyOutline />}
+            position="left"
+            handleClick={handleCopy}
+            otherClasses="!bg-[#161A31]"
+          />
+        </AuroraBackground>
       </div>
     </div>
   );
