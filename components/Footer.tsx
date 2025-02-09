@@ -41,7 +41,7 @@ const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center">
-        <h1 className="sm:px-8 text-center text-[40px] md:text-5xl lg:text-6xl heading text-blue-100 lg:max-w-[45vw]">
+        <h1 className="sm:px-8 text-center text-3xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
           Ready to take your digital presence to the next level ?
         </h1>
         <p className="text-blue-100 md:mt-10 my-5 text-center">
