@@ -114,7 +114,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
+          <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold  relative">
             {title}
           </h2>
           <div className="flex justify-center">
@@ -125,11 +125,11 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             </a>
           </div>
         </article>
-        <div className="flex items-center">
+        <div className="flex items-end justify-end">
           {slideData[index].icons.map((icon, index) => (
             <div
               key={index}
-              className="border border-white/[.2] rounded-full bg-transparent backdrop-blur-sm lg:w-10 lg:h-10 w-16 h-16 flex justify-center items-center"
+              className="border border-white/[.2] rounded-full bg-transparent backdrop-blur-sm md:w-16 md:h-16 w-10 h-10 flex justify-center items-center"
               style={{
                 transform: `translateX(-${5 * index + 2}px)`,
               }}
@@ -138,7 +138,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 key={index}
                 src={icon.src}
                 alt="icon"
-                className="w-10 h-10 lg:w-6 lg:h-6"
+                className="md:w-10 md:h-10 w-8 h-8"
               />
             </div>
           ))}
