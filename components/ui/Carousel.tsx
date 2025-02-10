@@ -125,7 +125,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             </a>
           </div>
         </article>
-        <div className="flex items-end justify-end">
+        <div className="ml-4 flex items-end justify-end">
           {slideData[index].icons.map((icon, index) => (
             <div
               key={index}

@@ -8,6 +8,7 @@ import { Approach } from "@/components/Approach";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import Footer from "@/components/Footer";
 import { TailwindGrid } from "@/components/TailwindGrid";
+import { SignupFormDemo } from "@/components/Form";
 
 export default function Home() {
   const navItems = [

@@ -9,6 +9,7 @@ import {
 import MagicButton from "./ui/MagicButton";
 import { FloatingDock } from "./ui/FloatingDock";
 import { FlipWords } from "./ui/FlipWords";
+import { SignupFormDemo } from "./Form";
 const words = [
   "seamless",
   "user-friendly",
@@ -59,19 +60,26 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:evedubuisson5@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <div className="my-8 flex flex-row justify-center items-center gap-32">
+          <div>
+            <a href="mailto:evedubuisson5@gmail.com">
+              <MagicButton
+                title="Get in touch by mail"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
+          <p className="text-white text-3xl">OR</p>
+          <div>
+            <SignupFormDemo />
+          </div>
+        </div>
       </div>
       <div className="px-8 flex mt-16 md:flex-row flex-row justify-between items-center">
         <p className="text-blue-100 md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Eve Dubuisson
         </p>
-
         <div className="flex items-center md:gap-3 gap-6 bg-black-100">
           <FloatingDock items={links} />
         </div>

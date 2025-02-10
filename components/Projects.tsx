@@ -11,6 +11,7 @@ export function Projects() {
       <h2 className="text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         A small selection of recent projects
       </h2>
+      <hr className="w-2 h-0.5 bg-gray-400 border-none" />
       <div className="relative overflow-hidden w-full h-full py-14">
         <Carousel slides={slideData} />
       </div>

@@ -39,9 +39,11 @@ export function Approach() {
       className="md:mt-[-20rem] mt-[-8rem] pb-24 w-screen flex flex-col justify-center items-center"
       id="approach"
     >
-      <h2 className="py-14 text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
+      <h2 className="py-14 flex flex-col justify-center items-center text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         My approach
+        <hr className="w-2 h-0.5 bg-gray-400 border-none" />
       </h2>
+
       <div className="flex direction-phases gap-4">
         {phases.map((phase) => {
           return (
