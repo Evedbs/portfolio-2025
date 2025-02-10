@@ -1,17 +1,23 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import {
   IconBrandGithub,
-  IconBrandX,
-  IconExchange,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 
 // import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";
 import { FloatingDock } from "./ui/FloatingDock";
+import { FlipWords } from "./ui/FlipWords";
+const words = [
+  "seamless",
+  "user-friendly",
+  "modern",
+  "intuitive",
+  "responsive",
+  "accessible",
+  "optimized",
+];
 
 const Footer = () => {
   const links = [
@@ -42,7 +48,8 @@ const Footer = () => {
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="sm:px-8 text-center text-3xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
-          Ready to take your digital presence to the next level ?
+          Ready to craft <FlipWords words={words} /> <br />
+          experiences where usability meets discoverability?
         </h1>
         <p className="text-blue-100 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you

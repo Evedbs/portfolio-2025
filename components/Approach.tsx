@@ -42,7 +42,7 @@ export function Approach() {
       <h2 className="py-14 text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         My approach
       </h2>
-      <div className="flex direction-phases gap-2">
+      <div className="flex direction-phases gap-4">
         {phases.map((phase) => {
           return (
             <DirectionAwareHover
