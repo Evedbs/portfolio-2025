@@ -36,7 +36,7 @@ const phases = [
 export function Approach() {
   return (
     <div
-      className="mt-[-20rem] pb-24 w-screen flex flex-col justify-center items-center"
+      className="md:mt-[-20rem] mt-[-8rem] pb-24 w-screen flex flex-col justify-center items-center"
       id="approach"
     >
       <h2 className="py-14 text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
