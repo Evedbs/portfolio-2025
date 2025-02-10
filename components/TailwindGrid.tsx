@@ -22,7 +22,7 @@ export const TailwindGrid = () => {
           I prioritize client collaboration, fostering open communication
         </h3>
       </div>
-      <div className="text-blue-100 bg-[#090d24] flex flex-row col-span-6 row-start-2 md:col-span-3 md:col-start-1 md:row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
+      <div className="text-blue-100 bg-[url('../assets/codeBlock.png')] bg-cover flex flex-row justify-between col-span-6 row-start-2 md:col-span-3 md:col-start-1 md:row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
         <div className="flex flex-col">
           <span className="font-light sm:text-xl">
             I constantly try to improve

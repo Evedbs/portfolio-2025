@@ -46,10 +46,14 @@ const Footer = () => {
   ];
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-      <div className="flex flex-col items-center">
-        <h1 className="sm:px-8 text-center text-3xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
-          Ready to craft <FlipWords words={words} /> <br />
-          experiences where usability meets discoverability?
+      <div className="flex w-screen flex-col items-center">
+        <h1 className="sm:px-8 text-center text-2xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
+          Ready to craft
+          <br />
+          <FlipWords words={words} /> <br />
+          experiences where usability
+          <br />
+          meets discoverability?
         </h1>
         <p className="text-blue-100 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
