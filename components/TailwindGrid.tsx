@@ -4,6 +4,7 @@ import MagicButton from "./ui/MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { StackList } from "./StackList";
 import { TypewriterEffectSmoothDemo } from "./TypewriterDemo";
+import { BackgroundGradientAnimation } from "./ui/BackgroundGradientAnimation";
 
 export const TailwindGrid = () => {
   const [copied, setCopied] = useState(false);
@@ -31,17 +32,21 @@ export const TailwindGrid = () => {
           I&apos;m very flexible with time zone communications
         </span>
       </div>
-      <div className="text-blue-100 col-span-6 row-start-4 md:col-span-4 md:col-start-2 md:row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl py-8 px-8">
-        <span className="mb-4 md:mb-0 font-extrabold">
-          <TypewriterEffectSmoothDemo />
-        </span>
-        <MagicButton
-          title={copied ? "Email is Copied!" : "Copy my email address"}
-          icon={<IoCopyOutline />}
-          position="left"
-          handleClick={handleCopy}
-          otherClasses="!bg-[#161A31]"
-        />
+      <div className="text-blue-100 col-span-6 row-start-4 md:col-span-4 md:col-start-2 md:row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl">
+        <BackgroundGradientAnimation>
+          <span className="mb-4 md:mb-0 font-extrabold">
+            <TypewriterEffectSmoothDemo />
+          </span>
+          <div className="w-screen flex flex-col justify-center items-center">
+            <MagicButton
+              title={copied ? "Email is Copied!" : "Copy my email address"}
+              icon={<IoCopyOutline />}
+              position="left"
+              handleClick={handleCopy}
+              otherClasses="!bg-[#161A31]"
+            />
+          </div>
+        </BackgroundGradientAnimation>
       </div>
     </div>
   );
