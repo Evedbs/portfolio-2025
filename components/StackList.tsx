@@ -10,7 +10,7 @@ export const StackList = () => {
         {stackListLeft.map((item, index) => {
           return (
             <div
-              className="border rounded-xl text-blue-100 bg-[#090d24] border-[#262b4a] py-1 px-2 flex justify-center items-center opacity-50"
+              className="text-xl font-bold border rounded-xl text-blue-100 bg-[#090d24] border-[#262b4a] py-1 px-2 flex justify-center items-center opacity-30"
               key={index}
             >
               {item}
@@ -22,7 +22,7 @@ export const StackList = () => {
         {stackListRight.map((item, index) => {
           return (
             <div
-              className="border rounded-xl text-blue-100 bg-[#090d24] border-[#262b4a] py-1 px-2 flex justify-center items-center opacity-50"
+              className="font-bold text-xl border rounded-xl text-blue-100 bg-[#090d24] border-[#262b4a] py-1 px-2 flex justify-center items-center opacity-30"
               key={index}
             >
               {item}

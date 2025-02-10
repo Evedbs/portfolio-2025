@@ -18,17 +18,21 @@ export const TailwindGrid = () => {
   return (
     <div className="relative grid grid-cols-6 grid-rows-5 gap-4 mx-16">
       <div className="text-blue-100 bg-cover col-span-6 md:col-span-3 border-[#262b4a] border rounded-xl py-8 px-8 bg-[#090d24] bg-[url('../assets/computer.jpg')]">
-        <h3>I prioritize client collaboration, fostering open communication</h3>
+        <h3 className="font-bold sm:text-xl">
+          I prioritize client collaboration, fostering open communication
+        </h3>
       </div>
       <div className="text-blue-100 bg-[#090d24] flex flex-row col-span-6 row-start-2 md:col-span-3 md:col-start-1 md:row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
         <div className="flex flex-col">
-          <span className="font-light">I constantly try to improve</span>
-          <h2 className="font-extrabold">My tech stack</h2>
+          <span className="font-light sm:text-xl">
+            I constantly try to improve
+          </span>
+          <h2 className="font-extrabold sm:text-xl">My tech stack</h2>
         </div>
         <StackList />
       </div>
       <div className="bg-[url('../assets/globe.jpg')] bg-cover text-blue-100 bg-[#090d24] col-span-6 row-start-3 md:col-span-3 md:row-span-2 md:col-start-4 md:row-start-1 border-[#262b4a] border rounded-xl py-8 px-8">
-        <span className="text-blue-100">
+        <span className="text-blue-100 text-xl font-bold">
           I&apos;m very flexible with time zone communications
         </span>
       </div>
