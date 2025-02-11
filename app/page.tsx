@@ -5,10 +5,9 @@ import { Projects } from "@/components/Projects";
 // import { SparklesPreview } from "@/components/SparklesText";
 import { FloatingNav } from "@/components/ui/FloatingNavBar";
 import { Approach } from "@/components/Approach";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { IconHome, IconUser } from "@tabler/icons-react";
 import Footer from "@/components/Footer";
 import { TailwindGrid } from "@/components/TailwindGrid";
-import { SignupFormDemo } from "@/components/Form";
 
 export default function Home() {
   const navItems = [

@@ -7,6 +7,78 @@ import tailwind from "../assets/tailwind.svg";
 import typescript from "../assets/typescript.svg";
 import vue from "../assets/vue.svg";
 
+export const englishContent = {
+  hero: {
+    foreword: "Dynamic Portfolio with Next.js",
+    // FIXME : dynamic title for the TextGrenerateEffect
+    subtitle: "Hi! I'm Eve, a Javascript Developer based in France.",
+  },
+  tailwindGrid: {
+    firstGrid:
+      "I prioritize client collaboration, fostering open communication",
+    secondGrid: {
+      firstSpan: "I constantly try to improve",
+      secondSpan: "My tech stack",
+    },
+    thirdGrid: "I'm very flexible with time zone communications",
+    // FIXME : dynamic content for the fourth grid
+  },
+  approach: {
+    title: "My Approach",
+  },
+  projects: {
+    title: "A small selection of recent projects",
+  },
+  footer: {
+    title: {
+      firstSpan: "Ready to craft",
+      // FIXME : dynamic content for the FlipWords component
+      secondSpan: "experiences where usability",
+      thirdSpan: "meets discoverability?",
+    },
+    description:
+      "Reach out to me today and let&apos;s discuss how I can help you achieve your goals.",
+    or: "OR",
+  },
+};
+
+export const frenchContent = {
+  hero: {
+    foreword: "Portfolio dynamique avec Next.js",
+    // FIXME : dynamic title for the TextGrenerateEffect
+    subtitle:
+      "Salut, je suis Eve, une développeuse javascript basée en France.",
+  },
+  tailwindGrid: {
+    firstGrid:
+      "Je privilégie la collaboration avec le client et favorise la communication ouverte",
+    secondGrid: {
+      firstSpan: "J’essaie constamment d'élargir",
+      secondSpan: "Ma stack technologique",
+    },
+    thirdGrid:
+      "Je suis très flexible avec les communications de fuseau horaire",
+    // FIXME : dynamic content for the fourth grid
+  },
+  approach: {
+    title: "Mon Approche",
+  },
+  projects: {
+    title: "Une petite sélection de projets récents",
+  },
+  footer: {
+    title: {
+      firstSpan: "Prêt à construire",
+      // FIXME : dynamic content for the FlipWords component
+      secondSpan: "des expériences où l'utilisabilité",
+      thirdSpan: "rejoint la découverte?",
+    },
+    description:
+      "Communiquez avec moi dès aujourd’hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
+    or: "OU",
+  },
+};
+
 export const slideData = [
   {
     title: "Sweet Recipes",
