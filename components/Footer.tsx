@@ -60,7 +60,7 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <div className="my-8 flex flex-row justify-center items-center gap-32">
+        <div className="my-8 flex flex-col lg:flex-row justify-center items-center gap-32">
           <div>
             <a href="mailto:evedubuisson5@gmail.com">
               <MagicButton

@@ -1,14 +1,51 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Label } from "./ui/Label";
 import { Input } from "./ui/Input";
 import { cn } from "@/utils/cn";
+import emailjs from "@emailjs/browser";
 
 export function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
   };
+
+  const form = useRef(null);
+
+  const [fields, setFields] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (
+      fields.firstName === "" ||
+      fields.lastName === "" ||
+      fields.email === "" ||
+      fields.message === ""
+    ) {
+      return;
+    }
+
+    emailjs
+      .sendForm("service_9l3n2ub", "template_e422sbt", form.current, {
+        publicKey: "bW68I-BVKwe7jivh5",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    setFields({ firstName: "", lastName: "", email: "", message: "" });
+  };
+
   return (
     <div className="border-[#262b4a] border  max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-[#090d24]">
       <h2 className="font-bold text-xl bg-[#090d24] dark:text-neutral-200">
@@ -19,29 +56,60 @@ export function SignupFormDemo() {
         great together!
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-8" onSubmit={handleSubmit} ref={form}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Joe" type="text" />
+            <Input
+              id="firstname"
+              placeholder="Joe"
+              type="text"
+              value={fields.firstName}
+              onChange={(e) =>
+                setFields({ ...fields, firstName: e.target.value })
+              }
+            />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Doe" type="text" />
+            <Input
+              id="lastname"
+              placeholder="Doe"
+              name="lastName"
+              type="text"
+              value={fields.lastName}
+              onChange={(e) =>
+                setFields({ ...fields, lastName: e.target.value })
+              }
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="johndoe@gmail.com" type="email" />
+          <Input
+            id="email"
+            placeholder="johndoe@gmail.com"
+            type="email"
+            value={fields.email}
+            onChange={(e) => setFields({ ...fields, email: e.target.value })}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password">Message</Label>
-          <Input id="message" placeholder="message" type="text" />
+          <Input
+            id="message"
+            placeholder="message"
+            type="text"
+            name="message"
+            value={fields.message}
+            onChange={(e) => setFields({ ...fields, message: e.target.value })}
+          />
         </LabelInputContainer>
 
         <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
+          onClick={sendEmail}
         >
           Submit &rarr;
           <BottomGradient />
