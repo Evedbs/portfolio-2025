@@ -47,7 +47,7 @@ export function SignupFormDemo() {
   };
 
   return (
-    <div className="border-[#262b4a] border  max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-[#090d24]">
+    <div className="border-[#262b4a] border  max-w-md w-full mx-auto rounded-2xl  p-4 md:p-8 shadow-input bg-[#090d24]">
       <h2 className="font-bold text-xl bg-[#090d24] dark:text-neutral-200">
         Send me a message
       </h2>
@@ -107,7 +107,7 @@ export function SignupFormDemo() {
         </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative border-[#262b4a] group/btn bg-black-100  w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_[#25283b])_inset]"
           type="submit"
           onClick={sendEmail}
         >
