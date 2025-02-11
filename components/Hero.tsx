@@ -10,7 +10,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div
-      className="pb-20 pt-36 relative w-full overflow-hidden flex flex-col"
+      className="h-screen relative w-full overflow-hidden flex flex-col justify-center"
       id="about"
     >
       <div className="absolute inset-0 w-full h-full bg-black-100 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
@@ -29,14 +29,14 @@ const Hero = () => {
       <div className="flex flex-col justify-center items-center relative z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            Dynamic Portfolio with Next.js
           </p>
           <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-2xl sm:text-4xl md:text-5xl lg:text-5xl"
+            className="text-center text-xl sm:text-4xl md:text-5xl lg:text-5xl"
           />
 
-          <p className="font-light text-center md:tracking-wider text-sm md:text-lg lg:text-2xl text-blue-100 max-w-80">
+          <p className="font-light text-center md:tracking-wider text-lg lg:text-2xl text-blue-100 max-w-80">
             Hi! I&apos;m Eve, a Javascript Developer based in France.
           </p>
 
