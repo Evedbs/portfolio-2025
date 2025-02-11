@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -60,6 +60,7 @@ export const FloatingNav = ({
           className
         )}
       >
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}

@@ -13,7 +13,7 @@ const phases = [
     description: `We'll collaborate to map out your website's goals, target
             audience, and key functionalities. We'll discuss things like site
             structure, navigation, and content requirements.`,
-    imageUrl: idea,
+    imageUrl: idea.src,
   },
   {
     title: "Phase 2",
@@ -21,7 +21,7 @@ const phases = [
     description: `Once we agree on the plan, I cue my lofi playlist and dive into
             coding. From initial sketches to polished code, I keep you updated
             every step of the way.`,
-    imageUrl: phase2,
+    imageUrl: phase2.src,
   },
   {
     title: "Phase 3",
@@ -29,7 +29,7 @@ const phases = [
     description: `This is where the magic happens! Based on the approved design, I'll
             translate everything into functional code, building your website
             from the ground up.`,
-    imageUrl: rocket,
+    imageUrl: rocket.src,
   },
 ];
 

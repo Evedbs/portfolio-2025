@@ -11,7 +11,7 @@ export function SignupFormDemo() {
     console.log("Form submitted");
   };
 
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
 
   const [fields, setFields] = useState({
     firstName: "",
@@ -20,7 +20,7 @@ export function SignupFormDemo() {
     message: "",
   });
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (
       fields.firstName === "" ||
@@ -28,6 +28,11 @@ export function SignupFormDemo() {
       fields.email === "" ||
       fields.message === ""
     ) {
+      return;
+    }
+
+    if (!form.current) {
+      console.error("Form reference is null");
       return;
     }
 

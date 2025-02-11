@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
@@ -24,7 +25,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   const xRef = useRef(0);
   const yRef = useRef(0);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number>(0);
 
   useEffect(() => {
     const animate = () => {
@@ -213,7 +214,6 @@ export function Carousel({ slides }: CarouselProps) {
             index={index}
             key={index}
             slide={slide}
-            index={index}
             current={current}
             handleSlideClick={handleSlideClick}
           />
