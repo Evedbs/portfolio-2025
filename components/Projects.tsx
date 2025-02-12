@@ -11,7 +11,7 @@ export function Projects() {
       id="projects"
       className="py-8 w-screen flex flex-col justify-center items-center"
     >
-      <h2 className="text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
+      <h2 className="px-1 sm:px-0 text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
         {language.content.projects.title}
       </h2>
       <hr className="w-2 h-0.5 bg-gray-400 border-none" />

@@ -20,9 +20,9 @@ export const TailwindGrid = () => {
   };
 
   return (
-    <div className="relative grid grid-cols-6 grid-rows-5 gap-4 mx-16">
+    <div className="relative grid grid-cols-6 grid-rows-5 gap-4 sm:mx-16">
       <div className="text-blue-100 bg-cover col-span-6 md:col-span-3 border-[#262b4a] border rounded-xl py-8 px-8 bg-[#090d24] bg-[url('../assets/computer.jpg')]">
-        <h3 className="font-bold sm:text-xl">
+        <h3 className="font-bold text-xl">
           {language.content.tailwindGrid.firstGrid}
         </h3>
       </div>

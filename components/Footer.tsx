@@ -60,7 +60,7 @@ const Footer = () => {
           <br />
           {language.content.footer.title.thirdSpan}
         </h1>
-        <p className="text-blue-100 md:mt-10 my-5 text-center">
+        <p className="px-1 sm:px-0 text-blue-100 md:mt-10 my-5 text-center">
           {language.content.footer.description}
         </p>
         <div className="my-8 flex flex-col lg:flex-row justify-center items-center gap-32">
