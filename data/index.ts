@@ -10,29 +10,96 @@ import idea from "../assets/idea.png";
 import phase2 from "../assets/phase2.jpg";
 import rocket from "../assets/rocket.jpg";
 
-export const phases = [
+export const englishForm = {
+  title: "Send me a message",
+  subtitle:
+    "Let’s turn your ideas into reality, reach out and let’s build something great together!",
+  content: {
+    firstContainer: {
+      label: "First name",
+      placeholer: "John",
+    },
+    secondContainer: {
+      label: "Last name",
+      placeholer: "Doe",
+    },
+    thirdContainer: {
+      label: "Email address",
+      placeholder: "johndoe@gmail.com",
+    },
+    fourthContainer: {
+      label: "Message",
+      placeholer:
+        "Hello Eve ! I'm looking for a developer to help build a web application in Javascript.",
+    },
+  },
+  button: "Submit",
+};
+
+export const frenchForm = {
+  title: "Envoyez-moi un message",
+  subtitle:
+    "Faisons de vos idées une réalité, communiquons et construisons ensemble quelque chose de grand!",
+  content: {
+    firstContainer: {
+      label: "Prénom",
+      placeholer: "John",
+    },
+    secondContainer: {
+      label: "Nom",
+      placeholer: "Doe",
+    },
+    thirdContainer: {
+      label: "Adresse email",
+      placeholder: "johndoe@gmail.com",
+    },
+    fourthContainer: {
+      label: "Message",
+      placeholer:
+        "Bonjour Eve ! Je cherche un développeur pour m'aider à construire une application web en Javascript.",
+    },
+  },
+  button: "Envoyer",
+};
+
+export const englishPhases = [
   {
     title: "Phase 1",
     subtitle: "Planning & Strategy",
-    description: `We'll collaborate to map out your website's goals, target
-            audience, and key functionalities. We'll discuss things like site
-            structure, navigation, and content requirements.`,
+    description: `We'll work together to define your website's objectives, identify your target audience, and determine essential features. Our discussions will cover aspects such as site layout, navigation, and content needs.`,
     imageUrl: idea.src,
   },
   {
     title: "Phase 2",
     subtitle: "Development & Progress Update",
-    description: `Once we agree on the plan, I cue my lofi playlist and dive into
-            coding. From initial sketches to polished code, I keep you updated
-            every step of the way.`,
+    description: `After we finalize the plan, I put on my lofi playlist and start coding. From rough sketches to refined code, I keep you informed throughout the entire process.`,
     imageUrl: phase2.src,
   },
   {
     title: "Phase 3",
     subtitle: "Development & Launch",
-    description: `This is where the magic happens! Based on the approved design, I'll
-            translate everything into functional code, building your website
-            from the ground up.`,
+    description: `This is where the real work begins! Using the approved design, I'll transform everything into functional code, developing your website from the ground up.`,
+    imageUrl: rocket.src,
+  },
+];
+
+export const frenchPhases = [
+  {
+    title: "Phase 1",
+    subtitle: "Planification & stratégie",
+    description: `Nous travaillerons ensemble pour définir les objectifs de votre site web, identifier votre public cible et déterminer les caractéristiques essentielles. Nos discussions porteront sur des aspects tels que la mise en page du site, la navigation et les besoins de contenu.`,
+    imageUrl: idea.src,
+  },
+  {
+    title: "Phase 2",
+    subtitle: "Développement & bilan des avancements",
+    description: `Après avoir finalisé le plan, j’ai mis ma playlist lofi et commencé à coder. Des esquisses aux codes raffinés, je vous tiens informé tout au long du processus.`,
+    imageUrl: phase2.src,
+  },
+  {
+    title: "Phase 3",
+    subtitle: "Development & lancement",
+    description: `C’est là que le vrai travail commence! En utilisant le design approuvé, je vais tout transformer en code fonctionnel, développant votre site web à partir de zéro.`,
     imageUrl: rocket.src,
   },
 ];
@@ -40,7 +107,6 @@ export const phases = [
 export const slideData = [
   {
     title: "Sweet Recipes",
-    button: "Explore Project",
     src: "https://i.pinimg.com/736x/25/d1/d5/25d1d5ab917a69a3cfd659e5ebb1de20.jpg",
     href: "https://sweetrecipes.vercel.app/",
     icons: [
@@ -53,7 +119,6 @@ export const slideData = [
   },
   {
     title: "Felinae Quiz",
-    button: "Explore Project",
     src: "https://images.unsplash.com/photo-1510920018318-3b4dfe979e4d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     href: "https://quiz.nybtech.fr/",
     icons: [
@@ -64,7 +129,6 @@ export const slideData = [
   },
   {
     title: "The Little Lemon",
-    button: "Explore Project",
     src: "https://i.pinimg.com/736x/73/32/c9/7332c9a137a75e33dbbf0b75dc7434c7.jpg",
     href: "https://lillemonrestaurant.netlify.app/",
     icons: [
@@ -175,6 +239,7 @@ export const englishContent = {
     foreword: "Dynamic Portfolio with Next.js",
     words: "Transforming Concepts into Seamless User Experiences",
     subtitle: "Hi! I'm Eve, a Javascript Developer based in France.",
+    button: "Show my work",
   },
   tailwindGrid: {
     firstGrid:
@@ -185,6 +250,10 @@ export const englishContent = {
     },
     thirdGrid: "I'm very flexible with time zone communications",
     // FIXME : dynamic content for the fourth grid
+    fourthGrid: {
+      button: "Copy my email address",
+      done: "Email is copied!",
+    },
   },
   approach: {
     title: "My Approach",
@@ -211,6 +280,7 @@ export const frenchContent = {
     words: "Transformer les concepts en expériences utilisateur fluides",
     subtitle:
       "Salut, je suis Eve, une développeuse javascript basée en France.",
+    button: "Voir mes projets",
   },
   tailwindGrid: {
     firstGrid:
@@ -222,6 +292,10 @@ export const frenchContent = {
     thirdGrid:
       "Je suis très flexible avec les communications de fuseau horaire",
     // FIXME : dynamic content for the fourth grid
+    fourthGrid: {
+      button: "Copier mon adresse email",
+      done: "Adresse email copiée!",
+    },
   },
   approach: {
     title: "Mon Approche",

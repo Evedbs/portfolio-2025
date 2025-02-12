@@ -1,5 +1,5 @@
 "use client";
-import { phases } from "@/data";
+import { englishPhases, frenchPhases } from "@/data";
 import "../app/styles/Approach.css";
 
 import { DirectionAwareHover } from "./ui/DirectionAwareHover";
@@ -7,6 +7,8 @@ import { useLanguage } from "@/contexts/language";
 
 export function Approach() {
   const { language } = useLanguage();
+
+  const phases = language.ISO === "en" ? englishPhases : frenchPhases;
 
   return (
     <div

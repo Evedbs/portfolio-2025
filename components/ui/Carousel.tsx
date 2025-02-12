@@ -4,10 +4,10 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 import { slideData } from "../../data/index";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/language";
 
 interface SlideData {
   title: string;
-  button: string;
   src: string;
   href: string;
   icons: { id: number; src: string }[];
@@ -22,6 +22,8 @@ interface SlideProps {
 
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const slideRef = useRef<HTMLLIElement>(null);
+
+  const { language } = useLanguage();
 
   const xRef = useRef(0);
   const yRef = useRef(0);
@@ -67,7 +69,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title, href } = slide;
+  const { src, title, href } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -121,7 +123,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           <div className="flex justify-center">
             <a href={href} target="_blank">
               <button className="mt-6  px-4 py-2 w-fit mx-auto sm:text-sm text-black bg-white h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-                {button}
+                {language.ISO === "en" ? "Explore project" : "Voir le projet"}
               </button>
             </a>
           </div>

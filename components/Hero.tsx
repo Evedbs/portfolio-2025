@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/language";
 
 const Hero = () => {
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   return (
     <div
@@ -65,7 +65,7 @@ const Hero = () => {
           </p>
           <a href="#projects" className="my-4">
             <MagicButton
-              title="Show my work"
+              title={language.content.hero.button}
               icon={<FaLocationArrow />}
               position="right"
             />

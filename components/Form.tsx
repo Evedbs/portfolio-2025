@@ -4,12 +4,18 @@ import { Label } from "./ui/Label";
 import { Input } from "./ui/Input";
 import { cn } from "@/utils/cn";
 import emailjs from "@emailjs/browser";
+import { englishForm, frenchForm } from "@/data";
+import { useLanguage } from "@/contexts/language";
 
 export function SignupFormDemo() {
+  const { language } = useLanguage();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
   };
+
+  const content = language.ISO === "en" ? englishForm : frenchForm;
 
   const form = useRef<HTMLFormElement>(null);
 
@@ -54,20 +60,21 @@ export function SignupFormDemo() {
   return (
     <div className="border-[#262b4a] border  max-w-md w-full mx-auto rounded-2xl  p-4 md:p-8 shadow-input bg-[#090d24]">
       <h2 className="font-bold text-xl bg-[#090d24] dark:text-neutral-200">
-        Send me a message
+        {content.title}
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Let’s turn your ideas into reality, reach out and let’s build something
-        great together!
+        {content.subtitle}
       </p>
 
       <form className="my-8" onSubmit={handleSubmit} ref={form}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
+            <Label htmlFor="firstname">
+              {content.content.firstContainer.label}
+            </Label>
             <Input
               id="firstname"
-              placeholder="Joe"
+              placeholder={content.content.firstContainer.placeholer}
               type="text"
               value={fields.firstName}
               onChange={(e) =>
@@ -76,10 +83,12 @@ export function SignupFormDemo() {
             />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
+            <Label htmlFor="lastname">
+              {content.content.secondContainer.label}
+            </Label>
             <Input
               id="lastname"
-              placeholder="Doe"
+              placeholder={content.content.secondContainer.placeholer}
               name="lastName"
               type="text"
               value={fields.lastName}
@@ -90,20 +99,20 @@ export function SignupFormDemo() {
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">{content.content.thirdContainer.label}</Label>
           <Input
             id="email"
-            placeholder="johndoe@gmail.com"
+            placeholder={content.content.thirdContainer.placeholder}
             type="email"
             value={fields.email}
             onChange={(e) => setFields({ ...fields, email: e.target.value })}
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Message</Label>
+          <Label>{content.content.fourthContainer.label}</Label>
           <Input
             id="message"
-            placeholder="message"
+            placeholder={content.content.fourthContainer.placeholer}
             type="text"
             name="message"
             value={fields.message}
@@ -116,7 +125,7 @@ export function SignupFormDemo() {
           type="submit"
           onClick={sendEmail}
         >
-          Submit &rarr;
+          {content.button} &rarr;
           <BottomGradient />
         </button>
         <div className="bg-gradient-to-r from-transparent via-[#b1a1ff] to-transparent my-8 h-[1px] w-full" />

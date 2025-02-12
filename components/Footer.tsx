@@ -25,6 +25,9 @@ const words = [
 const Footer = () => {
   const { language } = useLanguage();
 
+  const button =
+    language.ISO === "en" ? "Get in touch by mail" : "Prendre contact par mail";
+
   const links = [
     {
       title: "Home",
@@ -67,7 +70,7 @@ const Footer = () => {
           <div>
             <a href="mailto:evedubuisson5@gmail.com">
               <MagicButton
-                title="Get in touch by mail"
+                title={button}
                 icon={<FaLocationArrow />}
                 position="right"
               />

@@ -49,7 +49,11 @@ export const TailwindGrid = () => {
           </span>
           <div className="w-screen flex flex-col justify-center items-center">
             <MagicButton
-              title={copied ? "Email is Copied!" : "Copy my email address"}
+              title={
+                copied
+                  ? language.content.tailwindGrid.fourthGrid.done
+                  : language.content.tailwindGrid.fourthGrid.button
+              }
               icon={<IoCopyOutline />}
               position="left"
               handleClick={handleCopy}
