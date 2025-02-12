@@ -11,6 +11,7 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
+
   const wordsArray = words.split(" ");
   useEffect(() => {
     console.log(wordsArray);

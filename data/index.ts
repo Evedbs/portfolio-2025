@@ -6,78 +6,36 @@ import postgresql from "../assets/postgresql.svg";
 import tailwind from "../assets/tailwind.svg";
 import typescript from "../assets/typescript.svg";
 import vue from "../assets/vue.svg";
+import idea from "../assets/idea.png";
+import phase2 from "../assets/phase2.jpg";
+import rocket from "../assets/rocket.jpg";
 
-export const englishContent = {
-  hero: {
-    foreword: "Dynamic Portfolio with Next.js",
-    // FIXME : dynamic title for the TextGrenerateEffect
-    subtitle: "Hi! I'm Eve, a Javascript Developer based in France.",
+export const phases = [
+  {
+    title: "Phase 1",
+    subtitle: "Planning & Strategy",
+    description: `We'll collaborate to map out your website's goals, target
+            audience, and key functionalities. We'll discuss things like site
+            structure, navigation, and content requirements.`,
+    imageUrl: idea.src,
   },
-  tailwindGrid: {
-    firstGrid:
-      "I prioritize client collaboration, fostering open communication",
-    secondGrid: {
-      firstSpan: "I constantly try to improve",
-      secondSpan: "My tech stack",
-    },
-    thirdGrid: "I'm very flexible with time zone communications",
-    // FIXME : dynamic content for the fourth grid
+  {
+    title: "Phase 2",
+    subtitle: "Development & Progress Update",
+    description: `Once we agree on the plan, I cue my lofi playlist and dive into
+            coding. From initial sketches to polished code, I keep you updated
+            every step of the way.`,
+    imageUrl: phase2.src,
   },
-  approach: {
-    title: "My Approach",
+  {
+    title: "Phase 3",
+    subtitle: "Development & Launch",
+    description: `This is where the magic happens! Based on the approved design, I'll
+            translate everything into functional code, building your website
+            from the ground up.`,
+    imageUrl: rocket.src,
   },
-  projects: {
-    title: "A small selection of recent projects",
-  },
-  footer: {
-    title: {
-      firstSpan: "Ready to craft",
-      // FIXME : dynamic content for the FlipWords component
-      secondSpan: "experiences where usability",
-      thirdSpan: "meets discoverability?",
-    },
-    description:
-      "Reach out to me today and let&apos;s discuss how I can help you achieve your goals.",
-    or: "OR",
-  },
-};
-
-export const frenchContent = {
-  hero: {
-    foreword: "Portfolio dynamique avec Next.js",
-    // FIXME : dynamic title for the TextGrenerateEffect
-    subtitle:
-      "Salut, je suis Eve, une développeuse javascript basée en France.",
-  },
-  tailwindGrid: {
-    firstGrid:
-      "Je privilégie la collaboration avec le client et favorise la communication ouverte",
-    secondGrid: {
-      firstSpan: "J’essaie constamment d'élargir",
-      secondSpan: "Ma stack technologique",
-    },
-    thirdGrid:
-      "Je suis très flexible avec les communications de fuseau horaire",
-    // FIXME : dynamic content for the fourth grid
-  },
-  approach: {
-    title: "Mon Approche",
-  },
-  projects: {
-    title: "Une petite sélection de projets récents",
-  },
-  footer: {
-    title: {
-      firstSpan: "Prêt à construire",
-      // FIXME : dynamic content for the FlipWords component
-      secondSpan: "des expériences où l'utilisabilité",
-      thirdSpan: "rejoint la découverte?",
-    },
-    description:
-      "Communiquez avec moi dès aujourd’hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
-    or: "OU",
-  },
-};
+];
 
 export const slideData = [
   {
@@ -211,3 +169,75 @@ export const socialMedia = [
     img: "/link.svg",
   },
 ];
+
+export const englishContent = {
+  hero: {
+    foreword: "Dynamic Portfolio with Next.js",
+    words: "Transforming Concepts into Seamless User Experiences",
+    subtitle: "Hi! I'm Eve, a Javascript Developer based in France.",
+  },
+  tailwindGrid: {
+    firstGrid:
+      "I prioritize client collaboration, fostering open communication",
+    secondGrid: {
+      firstSpan: "I constantly try to improve",
+      secondSpan: "My tech stack",
+    },
+    thirdGrid: "I'm very flexible with time zone communications",
+    // FIXME : dynamic content for the fourth grid
+  },
+  approach: {
+    title: "My Approach",
+  },
+  projects: {
+    title: "A small selection of recent projects",
+  },
+  footer: {
+    title: {
+      firstSpan: "Ready to craft",
+      // FIXME : dynamic content for the FlipWords component
+      secondSpan: "experiences where usability",
+      thirdSpan: "meets discoverability?",
+    },
+    description:
+      "Reach out to me today and let&apos;s discuss how I can help you achieve your goals.",
+    or: "OR",
+  },
+};
+
+export const frenchContent = {
+  hero: {
+    foreword: "Portfolio dynamique avec Next.js",
+    words: "Transformer les concepts en expériences utilisateur fluides",
+    subtitle:
+      "Salut, je suis Eve, une développeuse javascript basée en France.",
+  },
+  tailwindGrid: {
+    firstGrid:
+      "Je privilégie la collaboration avec le client et favorise la communication ouverte",
+    secondGrid: {
+      firstSpan: "J’essaie constamment d'élargir",
+      secondSpan: "Ma stack technologique",
+    },
+    thirdGrid:
+      "Je suis très flexible avec les communications de fuseau horaire",
+    // FIXME : dynamic content for the fourth grid
+  },
+  approach: {
+    title: "Mon Approche",
+  },
+  projects: {
+    title: "Une petite sélection de projets récents",
+  },
+  footer: {
+    title: {
+      firstSpan: "Prêt à construire",
+      // FIXME : dynamic content for the FlipWords component
+      secondSpan: "des expériences où l'utilisabilité",
+      thirdSpan: "rejoint la découverte?",
+    },
+    description:
+      "Communiquez avec moi dès aujourd’hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
+    or: "OU",
+  },
+};

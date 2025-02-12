@@ -1,0 +1,39 @@
+@media (max-width: 450px) {
+  .responsive-direction-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stack-list {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .responsive-direction-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stack-list {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .responsive-direction-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stack-list {
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .responsive-direction-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stack-list {
+    margin-left: -2rem;
+  }
+}

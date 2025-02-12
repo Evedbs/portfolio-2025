@@ -1,3 +1,5 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
 import {
   IconBrandGithub,
@@ -5,11 +7,11 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 
-// import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";
 import { FloatingDock } from "./ui/FloatingDock";
 import { FlipWords } from "./ui/FlipWords";
 import { SignupFormDemo } from "./Form";
+import { useLanguage } from "@/contexts/language";
 const words = [
   "seamless",
   "user-friendly",
@@ -21,6 +23,8 @@ const words = [
 ];
 
 const Footer = () => {
+  const { language } = useLanguage();
+
   const links = [
     {
       title: "Home",
@@ -49,16 +53,15 @@ const Footer = () => {
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex w-screen flex-col items-center">
         <h1 className="sm:px-8 text-center text-2xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
-          Ready to craft
+          {language.content.footer.title.firstSpan}
           <br />
           <FlipWords words={words} /> <br />
-          experiences where usability
+          {language.content.footer.title.secondSpan}
           <br />
-          meets discoverability?
+          {language.content.footer.title.thirdSpan}
         </h1>
         <p className="text-blue-100 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          {language.content.footer.description}
         </p>
         <div className="my-8 flex flex-col lg:flex-row justify-center items-center gap-32">
           <div>
@@ -70,7 +73,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <p className="text-white text-3xl">OR</p>
+          <p className="text-white text-3xl">{language.content.footer.or}</p>
           <div>
             <SignupFormDemo />
           </div>

@@ -1,11 +1,12 @@
 import React from "react";
+import "../app/styles/TailwindGrid.css";
 
 export const StackList = () => {
   const stackListLeft = ["React", "Next", "Figma"];
   const stackListRight = ["Node", "Ember", "Vue"];
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row stack-list">
       <div className="flex flex-col gap-2 px-4">
         {stackListLeft.map((item, index) => {
           return (

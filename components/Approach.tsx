@@ -1,46 +1,20 @@
 "use client";
-import idea from "../assets/idea.png";
-import phase2 from "../assets/phase2.jpg";
-import rocket from "../assets/rocket.jpg";
+import { phases } from "@/data";
 import "../app/styles/Approach.css";
 
 import { DirectionAwareHover } from "./ui/DirectionAwareHover";
-
-const phases = [
-  {
-    title: "Phase 1",
-    subtitle: "Planning & Strategy",
-    description: `We'll collaborate to map out your website's goals, target
-            audience, and key functionalities. We'll discuss things like site
-            structure, navigation, and content requirements.`,
-    imageUrl: idea.src,
-  },
-  {
-    title: "Phase 2",
-    subtitle: "Development & Progress Update",
-    description: `Once we agree on the plan, I cue my lofi playlist and dive into
-            coding. From initial sketches to polished code, I keep you updated
-            every step of the way.`,
-    imageUrl: phase2.src,
-  },
-  {
-    title: "Phase 3",
-    subtitle: "Development & Launch",
-    description: `This is where the magic happens! Based on the approved design, I'll
-            translate everything into functional code, building your website
-            from the ground up.`,
-    imageUrl: rocket.src,
-  },
-];
+import { useLanguage } from "@/contexts/language";
 
 export function Approach() {
+  const { language } = useLanguage();
+
   return (
     <div
       className="md:mt-[-20rem] mt-[-8rem] pb-24 w-screen flex flex-col justify-center items-center"
       id="approach"
     >
       <h2 className="py-14 flex flex-col justify-center items-center text-center uppercase text-lg tracking-widest text-blue-100 max-w-80">
-        My approach
+        {language.content.approach.title}
         <hr className="w-2 h-0.5 bg-gray-400 border-none" />
       </h2>
 

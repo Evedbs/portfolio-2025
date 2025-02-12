@@ -8,6 +8,7 @@ import { Approach } from "@/components/Approach";
 import { IconHome, IconUser } from "@tabler/icons-react";
 import Footer from "@/components/Footer";
 import { TailwindGrid } from "@/components/TailwindGrid";
+import { LanguageContextProvider } from "../contexts/language";
 
 export default function Home() {
   const navItems = [
@@ -30,12 +31,14 @@ export default function Home() {
 
   return (
     <main className="flex flex-col relative bg-black-100">
-      <FloatingNav navItems={navItems} />
-      <Hero />
-      <TailwindGrid />
-      <Approach />
-      <Projects />
-      <Footer />
+      <LanguageContextProvider>
+        <FloatingNav navItems={navItems} />
+        <Hero />
+        <TailwindGrid />
+        <Approach />
+        <Projects />
+        <Footer />
+      </LanguageContextProvider>
     </main>
   );
 }

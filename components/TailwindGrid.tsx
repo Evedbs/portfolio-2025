@@ -5,9 +5,13 @@ import { IoCopyOutline } from "react-icons/io5";
 import { StackList } from "./StackList";
 import { TypewriterEffectSmoothDemo } from "./TypewriterDemo";
 import { BackgroundGradientAnimation } from "./ui/BackgroundGradientAnimation";
+import { useLanguage } from "@/contexts/language";
+import "../app/styles/TailwindGrid.css";
 
 export const TailwindGrid = () => {
   const [copied, setCopied] = useState(false);
+
+  const { language } = useLanguage();
 
   const handleCopy = () => {
     const text = "evedubuisson5@gmail.com";
@@ -19,21 +23,23 @@ export const TailwindGrid = () => {
     <div className="relative grid grid-cols-6 grid-rows-5 gap-4 mx-16">
       <div className="text-blue-100 bg-cover col-span-6 md:col-span-3 border-[#262b4a] border rounded-xl py-8 px-8 bg-[#090d24] bg-[url('../assets/computer.jpg')]">
         <h3 className="font-bold sm:text-xl">
-          I prioritize client collaboration, fostering open communication
+          {language.content.tailwindGrid.firstGrid}
         </h3>
       </div>
-      <div className="text-blue-100 bg-[url('../assets/codeBlock.png')] bg-cover flex flex-row justify-between col-span-6 row-start-2 md:col-span-3 md:col-start-1 md:row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
+      <div className="text-blue-100 responsive-direction-card bg-[url('../assets/codeBlock.png')] bg-cover flex flex-row justify-between col-span-6 row-start-2 md:col-span-3 md:col-start-1 md:row-start-2 border-[#262b4a] border rounded-xl py-8 px-8">
         <div className="flex flex-col">
           <span className="font-light sm:text-xl">
-            I constantly try to improve
+            {language.content.tailwindGrid.secondGrid.firstSpan}
           </span>
-          <h2 className="font-extrabold sm:text-xl">My tech stack</h2>
+          <h2 className="font-extrabold sm:text-xl">
+            {language.content.tailwindGrid.secondGrid.secondSpan}
+          </h2>
         </div>
         <StackList />
       </div>
       <div className="bg-[url('../assets/globe.jpg')] bg-cover text-blue-100 bg-[#090d24] col-span-6 row-start-3 md:col-span-3 md:row-span-2 md:col-start-4 md:row-start-1 border-[#262b4a] border rounded-xl py-8 px-8">
         <span className="text-blue-100 text-xl font-bold">
-          I&apos;m very flexible with time zone communications
+          {language.content.tailwindGrid.thirdGrid}
         </span>
       </div>
       <div className="text-blue-100 col-span-6 row-start-4 md:col-span-4 md:col-start-2 md:row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl">
