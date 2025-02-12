@@ -200,7 +200,7 @@ export const englishContent = {
       thirdSpan: "meets discoverability?",
     },
     description:
-      "Reach out to me today and let&apos;s discuss how I can help you achieve your goals.",
+      "Reach out to me today and let's discuss how I can help you achieve your goals.",
     or: "OR",
   },
 };
