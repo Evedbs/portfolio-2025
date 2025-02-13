@@ -12,21 +12,33 @@ import { FloatingDock } from "./ui/FloatingDock";
 import { FlipWords } from "./ui/FlipWords";
 import { SignupFormDemo } from "./Form";
 import { useLanguage } from "@/contexts/language";
-const words = [
-  "seamless",
-  "user-friendly",
-  "modern",
-  "intuitive",
-  "responsive",
-  "accessible",
-  "optimized",
-];
 
 const Footer = () => {
   const { language } = useLanguage();
 
+  const words =
+    language.ISO === "en"
+      ? [
+          "seamless",
+          "user-friendly",
+          "modern",
+          "intuitive",
+          "responsive",
+          "accessible",
+          "optimized",
+        ]
+      : [
+          "homogènes",
+          "user-friendly",
+          "modernes",
+          "intuitives",
+          "responsives",
+          "accessibles",
+          "optimisées",
+        ];
+
   const button =
-    language.ISO === "en" ? "Get in touch by mail" : "Prendre contact par mail";
+    language.ISO === "en" ? "Get in touch by mail" : "Prenez contact par mail";
 
   const links = [
     {
@@ -52,18 +64,30 @@ const Footer = () => {
       href: "https://github.com/Evedbs",
     },
   ];
+
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex w-screen flex-col items-center">
-        <h1 className="sm:px-8 text-center text-2xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
-          {language.content.footer.title.firstSpan}
-          <br />
-          <FlipWords words={words} /> <br />
-          {language.content.footer.title.secondSpan}
-          <br />
-          {language.content.footer.title.thirdSpan}
-        </h1>
-        <p className="px-1 sm:px-0 text-blue-100 md:mt-10 my-5 text-center">
+        {language.ISO === "en" ? (
+          <h1 className="sm:px-8 text-center text-2xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
+            {language.content.footer.title.firstSpan}
+            <br />
+            <FlipWords words={words} /> <br />
+            {language.content.footer.title.secondSpan}
+            <br />
+            {language.content.footer.title.thirdSpan}
+          </h1>
+        ) : (
+          <h1 className="sm:px-8 text-center text-2xl md:text-5xl lg:text-5xl heading text-blue-100 lg:max-w-[45vw]">
+            {language.content.footer.title.firstSpan}
+            <br />
+            {language.content.footer.title.secondSpan}
+            <br />
+            <FlipWords words={words} /> <br />
+            {language.content.footer.title.thirdSpan}
+          </h1>
+        )}
+        <p className="px-4 text-blue-100 md:mt-10 my-4 font-light text-center">
           {language.content.footer.description}
         </p>
         <div className="my-8 flex flex-col lg:flex-row justify-center items-center gap-32">

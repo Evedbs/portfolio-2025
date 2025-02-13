@@ -93,13 +93,13 @@ export const frenchPhases = [
   {
     title: "Phase 2",
     subtitle: "Développement & bilan des avancements",
-    description: `Après avoir finalisé le plan, j’ai mis ma playlist lofi et commencé à coder. Des esquisses aux codes raffinés, je vous tiens informé tout au long du processus.`,
+    description: `"Une fois le plan finalisé, je me lance dans le développement. Des esquisses au code abouti, je vous tiens informé à chaque étape."`,
     imageUrl: phase2.src,
   },
   {
     title: "Phase 3",
     subtitle: "Development & lancement",
-    description: `C’est là que le vrai travail commence! En utilisant le design approuvé, je vais tout transformer en code fonctionnel, développant votre site web à partir de zéro.`,
+    description: `C’est là que le vrai travail commence! En utilisant le design approuvé, je transforme tout en code fonctionnel, et développe votre site web à partir de zéro.`,
     imageUrl: rocket.src,
   },
 ];
@@ -186,39 +186,6 @@ export const gridItems = [
   },
 ];
 
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
 export const socialMedia = [
   {
     id: 1,
@@ -264,7 +231,6 @@ export const englishContent = {
   footer: {
     title: {
       firstSpan: "Ready to craft",
-      // FIXME : dynamic content for the FlipWords component
       secondSpan: "experiences where usability",
       thirdSpan: "meets discoverability?",
     },
@@ -277,21 +243,20 @@ export const englishContent = {
 export const frenchContent = {
   hero: {
     foreword: "Portfolio dynamique avec Next.js",
-    words: "Transformer les concepts en expériences utilisateur fluides",
+    words: "Transformer les idées en expériences utilisateur fluides",
     subtitle:
-      "Salut, je suis Eve, une développeuse javascript basée en France.",
+      "Bonjour, je suis Eve, développeuse fullstack et designer basée en France.",
     button: "Voir mes projets",
   },
   tailwindGrid: {
     firstGrid:
-      "Je privilégie la collaboration avec le client et favorise la communication ouverte",
+      "Je mise sur la collaboration avec le client et une communication transparente.",
     secondGrid: {
       firstSpan: "J’essaie constamment d'élargir",
       secondSpan: "Ma stack technologique",
     },
     thirdGrid:
-      "Je suis très flexible avec les communications de fuseau horaire",
-    // FIXME : dynamic content for the fourth grid
+      "Je m'adapte facilement aux différents fuseaux horaires pour communiquer.",
     fourthGrid: {
       button: "Copier mon adresse email",
       done: "Adresse email copiée!",
@@ -305,13 +270,12 @@ export const frenchContent = {
   },
   footer: {
     title: {
-      firstSpan: "Prêt à construire",
-      // FIXME : dynamic content for the FlipWords component
-      secondSpan: "des expériences où l'utilisabilité",
-      thirdSpan: "rejoint la découverte?",
+      firstSpan: "Prêt à concevoir",
+      secondSpan: "des expériences digitales",
+      thirdSpan: "alliant usabilité et découverte?",
     },
     description:
-      "Communiquez avec moi dès aujourd’hui et discutons de la façon dont je peux vous aider à atteindre vos objectifs.",
+      "Contactez-moi dès aujourd’hui pour discuter de la meilleure façon de vous aider à atteindre vos objectifs.",
     or: "OU",
   },
 };

@@ -34,7 +34,6 @@ export const DirectionAwareHover = ({
     if (!ref.current) return;
 
     const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
     switch (direction) {
       case 0:
         setDirection("top");
@@ -85,7 +84,7 @@ export const DirectionAwareHover = ({
           <motion.div
             className="relative h-full w-full"
             initial="initial"
-            whileHover={direction}
+            animate={isHovered ? direction : "initial"}
             exit="exit"
           >
             <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 backdrop-blur-sm z-10 transition duration-500" />
@@ -120,7 +119,7 @@ export const DirectionAwareHover = ({
                 ease: "easeOut",
               }}
               className={cn(
-                `text-white absolute flex flex-col top-[10%] left-[10%] w-80 items-center justify-center z-40 text-center ${childrenClassName}`
+                `text-white absolute flex flex-col top-[1%] left-[10%] w-80 items-center justify-center z-40 text-center ${childrenClassName}`
               )}
             >
               {isHovered && children}

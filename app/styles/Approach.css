@@ -27,14 +27,14 @@
 
 @media (max-width: 500px) {
   .container-content-card {
-    margin-left: -128px;
+    margin-left: -64px;
   }
   .card-phase {
-    width: 240px;
-    height: 240px;
+    width: 320px;
+    height: 320px;
   }
   .subtitle-card {
-    margin-top: 0.8rem;
+    margin-top: 4rem;
     font-size: 0.8rem;
     width: 12rem;
   }
@@ -42,6 +42,6 @@
     line-height: 1.2rem;
     margin-top: 0;
     font-size: 1rem;
-    width: 12rem;
+    width: 16rem;
   }
 }

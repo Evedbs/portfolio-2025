@@ -2,7 +2,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import chevronsDown from "../assets/chevronsDown.svg";
 import "../app/styles/Hero.css";
-// import { IoLanguage } from "react-icons/io5";
+import { IoLanguage } from "react-icons/io5";
 
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/language";
 
 const Hero = () => {
-  const { language } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <div
@@ -30,11 +30,11 @@ const Hero = () => {
         />
       </div>
       <div className="flex flex-col justify-center items-center relative z-10">
-        {/* <IoLanguage
+        <IoLanguage
           onClick={toggleLanguage}
           className="absolute z-876876876876 top-0 mt-[-64px] cursor-pointer w-[32px] h-[32px]"
           fill="white"
-        /> */}
+        />
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             {language.content.hero.foreword}
@@ -47,19 +47,6 @@ const Hero = () => {
             }
             className="text-center text-xl sm:text-4xl md:text-5xl lg:text-5xl"
           />
-          {/* {language.ISO === "en" ? (
-            <TextGenerateEffect
-              words={"Transforming Concepts into Seamless User Experiences"}
-              className="text-center text-xl sm:text-4xl md:text-5xl lg:text-5xl"
-            />
-          ) : (
-            <TextGenerateEffect
-              words={
-                "Transformer les concepts en expériences utilisateur fluides"
-              }
-              className="text-center text-xl sm:text-4xl md:text-5xl lg:text-5xl"
-            />
-          )} */}
           <p className="font-light text-center md:tracking-wider text-lg lg:text-2xl text-blue-100 max-w-80">
             {language.content.hero.subtitle}
           </p>
