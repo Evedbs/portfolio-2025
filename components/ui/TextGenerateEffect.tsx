@@ -39,7 +39,7 @@ export const TextGenerateEffect = ({
       <div className="my-4">
         <motion.div
           key={animationKey} // re-mount container on words change
-          className="dark:text-white text-5xl text-black leading-snug tracking-wide"
+          className="dark:text-white text-4xl sm:text-5xl lg:text-6xl text-black leading-snug tracking-wide"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

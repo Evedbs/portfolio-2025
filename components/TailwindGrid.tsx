@@ -4,9 +4,9 @@ import MagicButton from "./ui/MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { StackList } from "./StackList";
 import { TypewriterEffectSmoothDemo } from "./TypewriterDemo";
-import { BackgroundGradientAnimation } from "./ui/BackgroundGradientAnimation";
 import { useLanguage } from "@/contexts/language";
 import "../app/styles/TailwindGrid.css";
+import { Meteors } from "./ui/Meteors";
 
 export const TailwindGrid = () => {
   const [copied, setCopied] = useState(false);
@@ -43,10 +43,10 @@ export const TailwindGrid = () => {
         </span>
       </div>
       <div className="text-blue-100 col-span-6 row-start-4 md:col-span-4 md:col-start-2 md:row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl">
-        <BackgroundGradientAnimation>
-          <span className="mb-4 md:mb-0 font-extrabold">
+        <div className="w-full relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
+          <div className="mb-4 md:mb-0 font-extrabold w-full">
             <TypewriterEffectSmoothDemo />
-          </span>
+          </div>
           <div className="w-screen flex flex-col justify-center items-center">
             <MagicButton
               title={
@@ -60,7 +60,8 @@ export const TailwindGrid = () => {
               otherClasses="!bg-[#161A31]"
             />
           </div>
-        </BackgroundGradientAnimation>
+          <Meteors number={30} />
+        </div>
       </div>
     </div>
   );

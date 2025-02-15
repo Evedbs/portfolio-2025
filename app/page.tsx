@@ -9,6 +9,7 @@ import { IconHome, IconUser } from "@tabler/icons-react";
 import Footer from "@/components/Footer";
 import { TailwindGrid } from "@/components/TailwindGrid";
 import { LanguageContextProvider } from "../contexts/language";
+import { ThemeContextProvider } from "@/contexts/theme";
 
 export default function Home() {
   const navItems = [
@@ -30,15 +31,17 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col relative bg-black-100">
-      <LanguageContextProvider>
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <TailwindGrid />
-        <Approach />
-        <Projects />
-        <Footer />
-      </LanguageContextProvider>
-    </main>
+    <ThemeContextProvider>
+      <main className="flex flex-col relative bg-black-100">
+        <LanguageContextProvider>
+          <FloatingNav navItems={navItems} />
+          <Hero />
+          <TailwindGrid />
+          <Approach />
+          <Projects />
+          <Footer />
+        </LanguageContextProvider>
+      </main>
+    </ThemeContextProvider>
   );
 }

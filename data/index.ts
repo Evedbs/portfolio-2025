@@ -93,7 +93,7 @@ export const frenchPhases = [
   {
     title: "Phase 2",
     subtitle: "Développement & bilan des avancements",
-    description: `"Une fois le plan finalisé, je me lance dans le développement. Des esquisses au code abouti, je vous tiens informé à chaque étape."`,
+    description: `Une fois le plan finalisé, je me lance dans le développement. Des esquisses au code abouti, je vous tiens informé à chaque étape.`,
     imageUrl: phase2.src,
   },
   {
@@ -205,8 +205,8 @@ export const englishContent = {
   hero: {
     foreword: "Dynamic Portfolio with Next.js",
     words: "Transforming Concepts into Seamless User Experiences",
-    subtitle: "Hi! I'm Eve, a Javascript Developer based in France.",
-    button: "Show my work",
+    subtitle: "Hi! I'm Eve, fullstack Developer and designer based in France.",
+    button: "Download my resume",
   },
   tailwindGrid: {
     firstGrid:
@@ -246,7 +246,7 @@ export const frenchContent = {
     words: "Transformer les idées en expériences utilisateur fluides",
     subtitle:
       "Bonjour, je suis Eve, développeuse fullstack et designer basée en France.",
-    button: "Voir mes projets",
+    button: "Télécharger mon CV",
   },
   tailwindGrid: {
     firstGrid:
