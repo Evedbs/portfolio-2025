@@ -37,13 +37,13 @@ export const TailwindGrid = () => {
         </div>
         <StackList />
       </div>
-      <div className="bg-[url('../assets/globe.jpg')] bg-cover text-blue-100 bg-[#090d24] col-span-6 row-start-3 md:col-span-3 md:row-span-2 md:col-start-4 md:row-start-1 border-[#262b4a] border rounded-xl py-8 px-8">
+      <div className="bg-[url('../assets/earth.jpg')] bg-left bg-cover text-blue-100 bg-[#090d24] col-span-6 row-start-3 md:col-span-3 md:row-span-2 md:col-start-4 md:row-start-1 border-[#262b4a] border rounded-xl py-8 px-8">
         <span className="text-blue-100 text-xl font-bold">
           {language.content.tailwindGrid.thirdGrid}
         </span>
       </div>
       <div className="text-blue-100 col-span-6 row-start-4 md:col-span-4 md:col-start-2 md:row-start-3 flex flex-col justify-center items-center bg-[#090d24] border-[#262b4a] border rounded-xl">
-        <div className="w-full relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
+        <div className="w-full relative shadow-xl bg-[url('../assets/sky.jpg')] bg-cover border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
           <div className="mb-4 md:mb-0 font-extrabold w-full">
             <TypewriterEffectSmoothDemo />
           </div>
