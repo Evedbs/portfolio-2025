@@ -17,8 +17,8 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "./resume.pdf";
-    link.download = "resume.pdf";
+    link.href = "./resume-portfolio.pdf";
+    link.download = "resume-portfolio.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -53,7 +53,7 @@ const Hero = () => {
             words={
               language.ISO === "en"
                 ? "Transforming Concepts into Seamless User Experiences"
-                : "Transformer les concepts en expériences utilisateur fluides"
+                : "Transformons les idées en expériences utilisateur fluides"
             }
             className="text-center text-xl sm:text-4xl md:text-5xl lg:text-5xl"
           />

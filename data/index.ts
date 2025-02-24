@@ -272,7 +272,7 @@ export const frenchContent = {
     title: {
       firstSpan: "Prêt à concevoir",
       secondSpan: "des expériences digitales",
-      thirdSpan: "alliant usabilité et découverte?",
+      thirdSpan: "alliant usabilité et innovation?",
     },
     description:
       "Contactez-moi dès aujourd’hui pour discuter de la meilleure façon de vous aider à atteindre vos objectifs.",

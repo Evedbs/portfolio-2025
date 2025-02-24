@@ -13,7 +13,7 @@ export const LanguageIcon = ({ onClick }: { onClick: () => void }) => {
         width={40}
         alt="change language"
         src={language}
-        className="w-10 h-10 z-10"
+        className="z-10"
       />
     </div>
   );
