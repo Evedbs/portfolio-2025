@@ -43,12 +43,12 @@ export function SignupFormDemo() {
     }
 
     emailjs
-      .sendForm("service_9l3n2ub", "template_e422sbt", form.current, {
-        publicKey: "bW68I-BVKwe7jivh5",
+      .sendForm("service_kx3w489", "template_yoq2iw1", form.current, {
+        publicKey: "0Z3WYvGiPDFL3LHmd",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          console.log(form.current);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -89,7 +89,7 @@ export function SignupFormDemo() {
             <Input
               id="lastname"
               placeholder={content.content.secondContainer.placeholer}
-              name="lastName"
+              name="name"
               type="text"
               value={fields.lastName}
               onChange={(e) =>
@@ -104,6 +104,7 @@ export function SignupFormDemo() {
             id="email"
             placeholder={content.content.thirdContainer.placeholder}
             type="email"
+            name="email"
             value={fields.email}
             onChange={(e) => setFields({ ...fields, email: e.target.value })}
           />
