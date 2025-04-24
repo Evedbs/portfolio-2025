@@ -92,7 +92,7 @@ const Footer = () => {
         </p>
         <div className="my-8 flex flex-col lg:flex-row justify-center items-center gap-32">
           <div>
-            <a href="mailto:evedubuisson5@gmail.com">
+            <a href="mailto:evedubuisson.pro@gmail.com">
               <MagicButton
                 title={button}
                 icon={<FaLocationArrow />}
